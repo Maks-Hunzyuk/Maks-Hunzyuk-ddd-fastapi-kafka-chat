@@ -17,7 +17,8 @@ async def test_create_chat_command_success():
     faker = Faker()
     chat_handler = CreateChatCommandHandler(chat_repository=chat_repository_instance)
     mediator.register_command(CreateChatCommand, [chat_handler])
-    chat: Chat = (await mediator.handle_commands(CreateChatCommand(title=faker.text())))[0]
+    chat: Chat
+    chat, *_ = (await mediator.handle_commands(CreateChatCommand(title=faker.text())))
     assert await chat_repository_instance.check_chat_exists_by_title(title=chat.title.as_generic_type())
 
 

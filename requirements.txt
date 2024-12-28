@@ -31,6 +31,7 @@ pexpect==4.9.0
 pluggy==1.5.0
 prompt_toolkit==3.0.48
 ptyprocess==0.7.0
+punq==0.7.0
 pure_eval==0.2.3
 pydantic==2.10.3
 pydantic-extra-types==2.10.1
