@@ -4,7 +4,10 @@ from domain.exeptions.base import ApplicationExeption
 
 dataclass(eq=False)
 class TitleTooLongExeption(ApplicationExeption):
-    text: str
+    
+    def __init__(self, text: str):
+        super().__init__()
+        self.text = text
 
     @property
     def message(self):
