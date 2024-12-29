@@ -4,7 +4,8 @@ import pytest
 
 from domain.entities.messages import Chat
 from domain.values.massages import Title
-from infra.repositories.messages import BaseChatRepository, MemoryChatRepository
+from infra.repositories.messages.base import BaseChatRepository
+from infra.repositories.messages.memory import MemoryChatRepository
 from logic.commands.messages import CreateChatCommand, CreateChatCommandHandler
 from logic.exceptions.messages import ChatWithThatTitleAlreadyExistsRepositoryException
 from logic.mediator import Mediator
