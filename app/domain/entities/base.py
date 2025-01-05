@@ -10,7 +10,7 @@ from domain.events.base import BaseEvent
 @dataclass
 class BaseEntity(ABC):
     oid: str = field(
-        default_factory=lambda: str(uuid4),
+        default_factory=lambda: str(uuid4()),
         kw_only=True
     )
 
